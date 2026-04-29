@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>CheapPartsFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">CheapPartsFinder</div>
+    <div class="subtitle">Компьютер бөлшектерін тиімді бағамен іздеу</div>
+
+    <div class="owner-info">
+        <p><b>Владелец:</b> Женисулы Жасулан</p>
+        <p><b>Компания:</b> ИП Z-Tech</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="search-panel">
+        <input id="searchInput" type="text" placeholder="Мысалы: laptop, phone, monitor">
+        <input id="minPrice" type="number" placeholder="Мин. баға $">
+        <input id="maxPrice" type="number" placeholder="Макс. баға $">
+
+        <select id="sortType">
+            <option value="cheap">Арзаннан қымбатқа</option>
+            <option value="expensive">Қымбаттан арзанға</option>
+            <option value="rating">Рейтинг жоғары</option>
+            <option value="az">Атауы A-Z</option>
+            <option value="za">Атауы Z-A</option>
+        </select>
+
+        <button onclick="searchProducts()">Іздеу</button>
+    </section>
+
+    <section class="toolbar">
+        <button onclick="setView('grid')">▦ Плитка</button>
+        <button onclick="setView('list')">☰ Список</button>
+    </section>
+
+    <section id="result" class="products grid-view"></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
